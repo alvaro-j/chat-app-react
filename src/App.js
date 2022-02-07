@@ -21,7 +21,15 @@ const auth = firebase.auth();
 const firestore = firebase.firestore();
 
 const App = () => {
-	return <div>oi</div>;
+	const [user] = useAuthState(auth)
+	console.log(user);
+	return (
+		<div>
+			<section>
+				{user ? <ChatRoom /> : <SignIn />}
+			</section>
+		</div>
+	);
 };
 
 export default App;
