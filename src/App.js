@@ -6,6 +6,8 @@ import "firebase/compat/firestore";
 
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useCollectionData } from "react-firebase-hooks/firestore";
+import ChatRoom from "./components/ChatRoom";
+import SignIn from "./components/SignIn";
 
 firebase.initializeApp({
 	apiKey: "AIzaSyDj1QoqOESBmRZ3kLg8DwIAm6CQD59OQgk",
@@ -26,7 +28,7 @@ const App = () => {
 	return (
 		<div>
 			<section>
-				{user ? <ChatRoom /> : <SignIn />}
+				{user ? <ChatRoom /> : <SignIn auth={auth} />}
 			</section>
 		</div>
 	);
