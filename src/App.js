@@ -6,8 +6,10 @@ import "firebase/compat/firestore";
 
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useCollectionData } from "react-firebase-hooks/firestore";
+
 import ChatRoom from "./components/ChatRoom";
 import SignIn from "./components/SignIn";
+import SignOut from "./components/SignOut";
 
 firebase.initializeApp({
 	apiKey: "AIzaSyDj1QoqOESBmRZ3kLg8DwIAm6CQD59OQgk",
@@ -23,13 +25,14 @@ const auth = firebase.auth();
 const firestore = firebase.firestore();
 
 const App = () => {
-	const [user] = useAuthState(auth)
-	console.log(user);
+	const [user] = useAuthState(auth);
 	return (
 		<div>
-			<section>
-				{user ? <ChatRoom /> : <SignIn auth={auth} />}
-			</section>
+			<header>
+				<h1>Whatsapp 2</h1>
+				<SignOut auth={auth} />
+			</header>
+			<section>{user ? <ChatRoom /> : <SignIn auth={auth} />}</section>
 		</div>
 	);
 };
