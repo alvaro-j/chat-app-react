@@ -32,7 +32,7 @@ const App = () => {
 				<h1>Whatsapp 2</h1>
 				<SignOut auth={auth} />
 			</header>
-			<section>{user ? <ChatRoom firestore={firestore} /> : <SignIn auth={auth} />}</section>
+			<section>{user ? <ChatRoom firestore={firestore} useCollectionData={useCollectionData} /> : <SignIn auth={auth} />}</section>
 		</div>
 	);
 };
