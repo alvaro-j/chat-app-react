@@ -1,4 +1,5 @@
 import React from "react";
+import ChatMessage from "./ChatMessage";
 
 const ChatRoom = ({ firestore, useCollectionData }) => {
 	const messagesRef = firestore.collection("messages"); // makes reference to a firestore collection
@@ -8,7 +9,8 @@ const ChatRoom = ({ firestore, useCollectionData }) => {
 	console.log(messages);
 	return (
 		<>
-			<div>{messages && messages.map((msg) => <ChatMessage key={msg.id} />)}</div>
+			<div>{messages && messages.map((msg) => <ChatMessage key={msg.id} message={msg} />)}</div>{" "}
+			{/*👆 loop for each document in the collection*/}
 		</>
 	);
 };
