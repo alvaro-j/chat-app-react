@@ -1,7 +1,9 @@
-import React from 'react';
+import React from "react";
 
-const ChatMessage = () => {
-  return <div></div>;
+const ChatMessage = ({ message }) => {
+  console.log(message);
+	const { text, uid } = message;
+	return <p>{text}</p>;
 };
 
 export default ChatMessage;
