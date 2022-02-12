@@ -9,13 +9,17 @@ const ChatRoom = ({ firestore, useCollectionData, auth }) => {
 
 	const [formValue, setFormValue] = React.useState("");
 
+	const sendMessage = async (e) => {
+		e.preventDefault(); // prevents the page from refreshing
+	};
+
 	return (
 		<>
 			<div>
 				{messages && messages.map((msg) => <ChatMessage key={msg.id} message={msg} auth={auth} />)}
 			</div>
 			{/*👆 loop for each document in the collection*/}
-			<form>
+			<form onSubmit={sendMessage}>
 				<input type="text" value={formValue} onChange={(e) => setFormValue(e.target.value)} />
 				<button type="submit">Send</button>
 			</form>
