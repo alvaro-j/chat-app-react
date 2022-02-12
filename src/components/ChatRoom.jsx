@@ -30,7 +30,7 @@ const ChatRoom = ({ firebase, firestore, useCollectionData, auth }) => {
 			</div>
 			{/*👆 loop for each document in the collection*/}
 			<form onSubmit={sendMessage}>
-				<input type="text" value={formValue} onChange={(e) => setFormValue(e.target.value)} />
+				<input autoFocus type="text" value={formValue} onChange={(e) => setFormValue(e.target.value)} />
 				<button type="submit">Send</button>
 			</form>
 		</>
