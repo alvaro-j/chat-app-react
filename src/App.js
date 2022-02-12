@@ -27,7 +27,7 @@ const firestore = firebase.firestore();
 const App = () => {
 	const [user] = useAuthState(auth);
 	return (
-		<div>
+		<div className="App">
 			<header>
 				<h1>Whatsapp 2</h1>
 				<SignOut auth={auth} />
