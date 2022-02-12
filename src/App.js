@@ -34,7 +34,7 @@ const App = () => {
 			</header>
 			<section>
 				{user ? (
-					<ChatRoom firestore={firestore} useCollectionData={useCollectionData} />
+					<ChatRoom auth={auth} firestore={firestore} useCollectionData={useCollectionData} />
 				) : (
 					<SignIn auth={auth} />
 				)}
