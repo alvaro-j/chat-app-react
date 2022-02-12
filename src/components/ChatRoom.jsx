@@ -14,7 +14,7 @@ const ChatRoom = ({ firebase, firestore, useCollectionData, auth }) => {
 		const { uid, photoURL } = auth.currentUser; // get current user id and photo
 
 		await messagesRef.add({
-			text: formValue, // text from the input 
+			text: formValue, // text from the input
 			createdAt: firebase.firestore.FieldValue.serverTimestamp(), // timestamp
 			uid, // user id
 			photoURL, // user photo url
