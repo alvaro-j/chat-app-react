@@ -1,6 +1,42 @@
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5px 10px;
+}
+
+header button {
+	width: 50px;
+	height: 50px;
+	border-radius: 8px;
+}
+
+.logo {
+  width: 50px;
+	height: 50px;
+	border-radius: 10px;
+}
+
+button {
+	background-color: black;
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+
+.App {
+	text-align: center;
+	max-width: 720px;
+	margin: 0 auto;
+	background-color: royalblue;
+}
+
+.sent {
+  text-align: end;
+}
