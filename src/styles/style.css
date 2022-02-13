@@ -31,6 +31,13 @@ header button {
 	border-radius: 10px;
 }
 
+.img-count {
+	max-width: 400px;
+	width: 100%;
+	margin-bottom: 20px;
+	padding: 0px 10px;
+}
+
 button {
 	border: none;
 	cursor: pointer;
