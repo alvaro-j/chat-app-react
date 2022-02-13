@@ -40,7 +40,7 @@ const ChatRoom = ({ firebase, firestore, useCollectionData, auth }) => {
 					value={formValue}
 					onChange={(e) => setFormValue(e.target.value)}
 				/>
-				<button type="submit">Send</button>
+				<button type="submit" className="material-icons golden-btn">send</button>
 			</form>
 		</>
 	);
