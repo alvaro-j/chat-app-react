@@ -30,7 +30,7 @@ const App = () => {
 		<div className="App">
 			<header>
 				<a href="/" className="logo">
-					<img src="whatsapp2.png" alt="logo"></img>
+					<img src="images/whatsapp2.png" alt="logo"></img>
 				</a>
 				<SignOut auth={auth} />
 			</header>
