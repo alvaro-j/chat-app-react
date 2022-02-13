@@ -20,6 +20,11 @@ header button {
 .logo {
   width: 50px;
 	height: 50px;
+}
+
+.logo img {
+	width: 50px;
+	height: 50px;
 	border-radius: 10px;
 }
 
@@ -37,6 +42,23 @@ button {
 	background-color: royalblue;
 }
 
-.sent {
-  text-align: end;
+
+.message {
+	display: flex;
+	padding: 5px 10px;
 }
+
+.message img {
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+}
+
+.sent {
+	flex-direction: row-reverse;
+}
+
+.sent p {
+	align-self: flex-end;
+}
+
