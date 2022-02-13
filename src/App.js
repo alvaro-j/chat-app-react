@@ -29,7 +29,9 @@ const App = () => {
 	return (
 		<div className="App">
 			<header>
-				<h1>Whatsapp 2</h1>
+				<a href="/" className="logo">
+					<img src="whatsapp2.png" alt="logo"></img>
+				</a>
 				<SignOut auth={auth} />
 			</header>
 			<section>
