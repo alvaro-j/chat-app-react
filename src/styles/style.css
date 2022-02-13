@@ -44,6 +44,7 @@ button {
 	transition: all 0.2s ease-in-out;
 	background-size: 100% 100%;
 	background-position: center;
+	color: rgb(120, 50, 5);
 }
 
 .golden-btn:hover {
@@ -51,6 +52,17 @@ button {
 		inset 0 -2px 5px 1px #b17d10, inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
 	border: 1px solid rgba(165, 93, 7, 0.6);
 	background-size: 150% 150%;
+	color: rgba(120, 50, 5, 0.8);
+}
+
+.sign-in-btn {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto;
+	padding: 10px 15px;
+	border-radius: 8px;
+	font-size: 1rem;
 }
 
 .App {
@@ -58,6 +70,7 @@ button {
 	max-width: 720px;
 	margin: 0 auto;
 	background-image: url(/images/whats-background.webp);
+	min-height: 100vh;
 }
 
 form {
