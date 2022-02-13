@@ -9,6 +9,8 @@ const ChatRoom = ({ firebase, firestore, useCollectionData, auth }) => {
 
 	const [formValue, setFormValue] = React.useState("");
 
+	const scroll = React.useRef();
+
 	const sendMessage = async (e) => {
 		e.preventDefault(); // prevents the page from refreshing
 		const { uid, photoURL } = auth.currentUser; // get current user id and photo
@@ -21,16 +23,23 @@ const ChatRoom = ({ firebase, firestore, useCollectionData, auth }) => {
 		});
 		// 👆 creates a new document on firestore. this method takes a object as a argument
 		setFormValue("");
+		scroll.current.scrollIntoView({ behavior: "smooth" }); // scrolls to back to the input
 	};
 
 	return (
 		<>
 			<div>
 				{messages && messages.map((msg) => <ChatMessage key={msg.id} message={msg} auth={auth} />)}
+				<div ref={scroll}></div>
 			</div>
 			{/*👆 loop for each document in the collection*/}
 			<form onSubmit={sendMessage}>
-				<input autoFocus type="text" value={formValue} onChange={(e) => setFormValue(e.target.value)} />
+				<input
+					autoFocus
+					type="text"
+					value={formValue}
+					onChange={(e) => setFormValue(e.target.value)}
+				/>
 				<button type="submit">Send</button>
 			</form>
 		</>
