@@ -18,7 +18,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Overview🎯
 
-The long awaited app has finally been released. Welcome to the Whatsapp 2!
+The long awaited app has finally been released. There is no more 12 days of waiting! Welcome to the Whatsapp 2!
 
 ### Links🔗
 
@@ -35,6 +35,7 @@ The long awaited app has finally been released. Welcome to the Whatsapp 2!
 - Create React App
 - Firebase
 - Firestore
+- Google authentication
 
 ### What I learned📝
 
