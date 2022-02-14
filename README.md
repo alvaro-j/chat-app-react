@@ -48,6 +48,14 @@ await messagesRef.add({
 			photoURL, // user photo url
 		});
 ```
+- Use the <strong>Firebase authentication</strong>:
+```js
+const signInWithGoogle = () => {
+		const provider = new firebase.auth.GoogleAuthProvider(); //gets the google autentication
+		auth.signInWithPopup(provider); //shows google popup
+	};
+``` 
+
 ### Useful resources
 
 - [Firebase authentication](https://www.youtube.com/watch?v=mEF9WRwYDfY) - This helped me understand how the Firebase authentication works. I'd recommend it to anyone who wants to understand this.
