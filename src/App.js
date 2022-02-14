@@ -12,13 +12,13 @@ import SignIn from "./components/SignIn";
 import SignOut from "./components/SignOut";
 
 firebase.initializeApp({
-	apiKey: "AIzaSyDj1QoqOESBmRZ3kLg8DwIAm6CQD59OQgk",
-	authDomain: "chat-app-react-1ccb9.firebaseapp.com",
-	projectId: "chat-app-react-1ccb9",
-	storageBucket: "chat-app-react-1ccb9.appspot.com",
-	messagingSenderId: "891542763042",
-	appId: "1:891542763042:web:149f3509682e67b7d77c7b",
-	measurementId: "G-6BFFC5JYPN",
+	apiKey: process.env.REACT_APP_API_KEY,
+	authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+	projectId: process.env.REACT_APP_PROJECT_ID,
+	storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+	messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+	appId: process.env.REACT_APP_APP_ID,
+	measurementId: process.env.REACT_APP_MEASUREMENT_ID,
 });
 
 const auth = firebase.auth();
