@@ -39,13 +39,13 @@ The long awaited app has finally been released. There is no more 12 days of wait
 
 ### What I learned📝
 
-- Create a documente in <strong>Firestore</strong>:
+- Create a document in <strong>Firestore</strong>:
 ```js
 
 ```
 ### Useful resources
 
-- [Context API](https://www.youtube.com/watch?v=35lXWvCuM8o) - This helped me understand how to use the Context API from React. I'd recommend it to anyone who wants to understand this.
+- [Firebase authentication](https://www.youtube.com/watch?v=mEF9WRwYDfY) - This helped me understand how the Firebase authentication works. I'd recommend it to anyone who wants to understand this.
 
 ## Author🙋🏻
 
