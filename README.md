@@ -41,7 +41,12 @@ The long awaited app has finally been released. There is no more 12 days of wait
 
 - Create a document in <strong>Firestore</strong>:
 ```js
-
+await messagesRef.add({
+			text: formValue, // text from the input
+			createdAt: firebase.firestore.FieldValue.serverTimestamp(), // timestamp
+			uid, // user id
+			photoURL, // user photo url
+		});
 ```
 ### Useful resources
 
