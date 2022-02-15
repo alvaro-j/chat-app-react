@@ -15,7 +15,8 @@ const ChatRoom = ({ firebase, firestore, useCollectionData, auth }) => {
 	const sendMessage = async (e) => {
 		e.preventDefault(); // prevents the page from refreshing
 		const { uid, photoURL } = auth.currentUser; // get current user id and photo
-		if (input.current.value.replaceAll(" ", "") !== "") // remove white spaces
+		if (input.current.value.replaceAll(" ", "") !== "")
+			// remove white spaces
 			await messagesRef.add({
 				text: formValue, // text from the input
 				createdAt: firebase.firestore.FieldValue.serverTimestamp(), // timestamp
@@ -24,6 +25,8 @@ const ChatRoom = ({ firebase, firestore, useCollectionData, auth }) => {
 			});
 		// 👆 creates a new document on firestore. this method takes a object as a argument
 		setFormValue("");
+		const whatSound = new Audio("./sounds/whatsound.mp3");
+		whatSound.play();
 		scroll.current.scrollIntoView({ behavior: "smooth" }); // scrolls to back to the input
 	};
 
