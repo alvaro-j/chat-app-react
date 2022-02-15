@@ -78,13 +78,13 @@ button {
 	margin: 0 auto;
 	background-image: url(/images/whats-background.webp);
 	min-height: 100vh;
+	animation: fadeIn 6.5s ease-in-out;
 }
 
 form {
 	margin-top: 20px;
 	display: flex;
 	padding: 5px 10px;
-
 }
 
 form input {
@@ -130,4 +130,13 @@ form button {
 .received p {
 	background-color: white;
 	margin-left: 7px;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
