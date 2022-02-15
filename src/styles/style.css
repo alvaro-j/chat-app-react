@@ -73,15 +73,18 @@ button {
 }
 
 .App {
-	text-align: center;
-	max-width: 720px;
-	margin: 0 auto;
-	animation: fadeIn 6.5s ease-in-out;
+	display: flex;
+	justify-content: center;
+	background: linear-gradient(-45deg, #a54e07, #b47e11, #fef1a2, #bc881b, #a54e07);
+	animation: fadeIn 6.5s ease-in-out, gradient 4s ease infinite;
+	background-size: 400% 400%;
 }
 
 main {
 	background-image: url(/images/whats-background.webp);
 	min-height: 100vh;
+	flex-basis: 700px;
+
 }
 
 form {
@@ -141,5 +144,17 @@ form button {
 	}
 	100% {
 		opacity: 1;
+	}
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
 	}
 }
