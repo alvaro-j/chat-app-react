@@ -39,6 +39,7 @@ const ChatRoom = ({ firebase, firestore, useCollectionData, auth }) => {
 			{/*👆 loop for each document in the collection*/}
 			<form onSubmit={sendMessage}>
 				<input
+					maxLength="100"
 					ref={input}
 					autoFocus
 					type="text"
