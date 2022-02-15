@@ -15,7 +15,8 @@ const ChatRoom = ({ firebase, firestore, useCollectionData, auth }) => {
 	const sendMessage = async (e) => {
 		e.preventDefault(); // prevents the page from refreshing
 		const { uid, photoURL } = auth.currentUser; // get current user id and photo
-		if (input.current.value !== "")
+		console.log(input.current.value);
+		if (input.current.value.replaceAll(" ", "") !== "")
 			await messagesRef.add({
 				text: formValue, // text from the input
 				createdAt: firebase.firestore.FieldValue.serverTimestamp(), // timestamp
