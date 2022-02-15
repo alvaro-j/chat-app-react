@@ -28,24 +28,26 @@ const App = () => {
 	const [user] = useAuthState(auth);
 	return (
 		<div className="App">
-			<header>
-				<a href="/" className="logo">
-					<img src="images/whatsapp2.png" alt="logo"></img>
-				</a>
-				<SignOut auth={auth} />
-			</header>
-			<section>
-				{user ? (
-					<ChatRoom
-						firebase={firebase}
-						auth={auth}
-						firestore={firestore}
-						useCollectionData={useCollectionData}
-					/>
-				) : (
-					<SignIn auth={auth} />
-				)}
-			</section>
+			<main>
+				<header>
+					<a href="/" className="logo">
+						<img src="images/whatsapp2.png" alt="logo"></img>
+					</a>
+					<SignOut auth={auth} />
+				</header>
+				<section>
+					{user ? (
+						<ChatRoom
+							firebase={firebase}
+							auth={auth}
+							firestore={firestore}
+							useCollectionData={useCollectionData}
+						/>
+					) : (
+						<SignIn auth={auth} />
+					)}
+				</section>
+			</main>
 		</div>
 	);
 };
