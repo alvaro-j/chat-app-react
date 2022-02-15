@@ -10,17 +10,18 @@ const ChatRoom = ({ firebase, firestore, useCollectionData, auth }) => {
 	const [formValue, setFormValue] = React.useState("");
 
 	const scroll = React.useRef();
+	const input = React.useRef();
 
 	const sendMessage = async (e) => {
 		e.preventDefault(); // prevents the page from refreshing
 		const { uid, photoURL } = auth.currentUser; // get current user id and photo
-
-		await messagesRef.add({
-			text: formValue, // text from the input
-			createdAt: firebase.firestore.FieldValue.serverTimestamp(), // timestamp
-			uid, // user id
-			photoURL, // user photo url
-		});
+		if (input.current.value !== "")
+			await messagesRef.add({
+				text: formValue, // text from the input
+				createdAt: firebase.firestore.FieldValue.serverTimestamp(), // timestamp
+				uid, // user id
+				photoURL, // user photo url
+			});
 		// 👆 creates a new document on firestore. this method takes a object as a argument
 		setFormValue("");
 		scroll.current.scrollIntoView({ behavior: "smooth" }); // scrolls to back to the input
@@ -35,12 +36,15 @@ const ChatRoom = ({ firebase, firestore, useCollectionData, auth }) => {
 			{/*👆 loop for each document in the collection*/}
 			<form onSubmit={sendMessage}>
 				<input
+					ref={input}
 					autoFocus
 					type="text"
 					value={formValue}
 					onChange={(e) => setFormValue(e.target.value)}
 				/>
-				<button type="submit" className="material-icons golden-btn">send</button>
+				<button type="submit" className="material-icons golden-btn">
+					send
+				</button>
 			</form>
 		</>
 	);
