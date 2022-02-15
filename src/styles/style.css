@@ -84,7 +84,7 @@ main {
 	background-image: url(/images/whats-background.webp);
 	min-height: 100vh;
 	flex-basis: 700px;
-
+	text-align: center;
 }
 
 form {
