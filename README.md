@@ -55,7 +55,36 @@ const signInWithGoogle = () => {
 		auth.signInWithPopup(provider); //shows google popup
 	};
 ``` 
+- Transform a normal web app into a <strong>PWA</strong>:
+```js
+{
+	"name": "React chat app",
+	"short_name": "Chat app",
+	"start_url": "index.html",
+	"icons": [
+		{
+			"src": "images/maskable_icon.png",
+			"sizes": "196x196",
+			"type": "image/png",
+			"purpose": "any maskable"
+		},
+		{
+			"src": "images/whatsapp2.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "images/whats2-512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	],
+	"background_color": "#000000",
+	"display": "standalone",
+	"theme_color": "#FFFFFF"
+}
 
+```
 ### Useful resources
 
 - [Firebase authentication](https://www.youtube.com/watch?v=mEF9WRwYDfY) - This helped me understand how the Firebase authentication works. I'd recommend it to anyone who wants to understand this.
