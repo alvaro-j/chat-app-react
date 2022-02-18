@@ -88,6 +88,7 @@ const signInWithGoogle = () => {
 ### Useful resources
 
 - [Firebase authentication](https://www.youtube.com/watch?v=mEF9WRwYDfY) - This helped me understand how the Firebase authentication works. I'd recommend it to anyone who wants to understand this.
+- [Convert React app into PWA](https://www.youtube.com/watch?v=RvEEZLxiAlQ) - This helped me to transform my normal React application into a Progressive Web App. I'd recommend it to anyone who wants to do the same.
 
 ## Author🙋🏻
 
