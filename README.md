@@ -18,7 +18,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Overview🎯
 
-The long awaited app has finally been released. There is no more 12 days of waiting! Welcome to the Whatsapp 2!
+The long awaited app has finally been released. There is no more 12 days of waiting! Welcome to the Whatsapp 2! It has real time chat messages and mobile friendly design!
 
 ### Links🔗
 
