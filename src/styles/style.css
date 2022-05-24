@@ -44,22 +44,22 @@ button {
 }
 
 .golden-btn {
-	background-image: linear-gradient(160deg, #a54e07, #b47e11, #fef1a2, #bc881b, #a54e07);
+	background-image: linear-gradient(135deg, #b3ffab 10%, #12fff7 100%);
 	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(110, 80, 20, 0.4),
-		inset 0 -2px 5px 1px rgba(139, 66, 8, 1), inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
-	border: 1px solid #a55d07;
+		inset 0 -2px 5px 1px #b3ffab, inset 0 -1px 1px 3px #12fff7;
+	border: 1px solid #12fff7;
 	transition: all 0.2s ease-in-out;
 	background-size: 100% 100%;
 	background-position: center;
-	color: rgb(120, 50, 5);
+	color: black;
 }
 
 .golden-btn:hover {
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23),
-		inset 0 -2px 5px 1px #b17d10, inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
-	border: 1px solid rgba(165, 93, 7, 0.6);
+		inset 0 -2px 5px 1px #12fff7, inset 0 -1px 1px 3px #b3ffab;
+	border: 1px solid #b3ffab;
 	background-size: 150% 150%;
-	color: rgba(120, 50, 5, 0.8);
+	color: #12fff7;
 }
 
 .sign-in-btn {
@@ -75,13 +75,13 @@ button {
 .App {
 	display: flex;
 	justify-content: center;
-	background: linear-gradient(-45deg, #a54e07, #b47e11, #fef1a2, #bc881b, #a54e07);
+	background: linear-gradient(135deg, #b3ffab 10%, #12fff7 100%);
 	animation: fadeIn 6.5s ease-in-out, gradient 4s ease infinite;
 	background-size: 400% 400%;
 }
 
 main {
-	background-image: url(/images/whats-background.webp);
+	background-color: black;
 	min-height: 100vh;
 	flex-basis: 700px;
 	text-align: center;
@@ -157,4 +157,26 @@ form button {
 	100% {
 		background-position: 0% 50%;
 	}
+}
+
+button {
+	padding:10px;
+	background-color:#6a67ce;
+	color: #FFFFFF;
+	border: 0px;
+	cursor:pointer;
+	border-radius: 5px;
+}
+#output {
+	background-color:#F9F9F9;
+	padding:10px;
+	width: 100%;
+	margin-top:20px;
+	line-height:30px;
+}
+.hide {
+	display:none;
+}
+.show {
+	display:block;
 }
