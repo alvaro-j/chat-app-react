@@ -1,5 +1,6 @@
 import React from "react";
 import ChatMessage from "./ChatMessage";
+import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition'
 
 const ChatRoom = ({ firebase, firestore, useCollectionData, auth }) => {
 	const messagesRef = firestore.collection("messages"); // makes reference to a firestore collection
@@ -8,7 +9,6 @@ const ChatRoom = ({ firebase, firestore, useCollectionData, auth }) => {
 	//👆 when the data changes, this component will render again
 
 	const [formValue, setFormValue] = React.useState("");
-
 	const scroll = React.useRef();
 	const input = React.useRef();
 
@@ -25,10 +25,15 @@ const ChatRoom = ({ firebase, firestore, useCollectionData, auth }) => {
 			});
 		// 👆 creates a new document on firestore. this method takes a object as a argument
 		setFormValue("");
-		const whatSound = new Audio("./sounds/whatsound.mp3");
-		whatSound.play();
 		scroll.current.scrollIntoView({ behavior: "smooth" }); // scrolls to back to the input
 	};
+
+	//Voice to Text
+	const { transcript, resetTranscript } = useSpeechRecognition()
+
+	if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
+	  return null
+	}
 
 	return (
 		<>
@@ -43,13 +48,17 @@ const ChatRoom = ({ firebase, firestore, useCollectionData, auth }) => {
 					ref={input}
 					autoFocus
 					type="text"
-					value={formValue}
+					value={formValue || transcript}
 					onChange={(e) => setFormValue(e.target.value)}
 				/>
 				<button type="submit" className="material-icons golden-btn">
 					send
 				</button>
-			</form>
+				<button onClick={SpeechRecognition.startListening}>Start</button>
+      			<button onClick={SpeechRecognition.stopListening}>Stop</button>
+      			<button onClick={resetTranscript}>Reset</button>
+			</form>	
+				
 		</>
 	);
 };

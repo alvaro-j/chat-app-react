@@ -12,13 +12,13 @@ import SignIn from "./components/SignIn";
 import SignOut from "./components/SignOut";
 
 firebase.initializeApp({
-	apiKey: process.env.REACT_APP_API_KEY,
-	authDomain: process.env.REACT_APP_AUTH_DOMAIN,
-	projectId: process.env.REACT_APP_PROJECT_ID,
-	storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
-	messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
-	appId: process.env.REACT_APP_APP_ID,
-	measurementId: process.env.REACT_APP_MEASUREMENT_ID,
+	apiKey: "AIzaSyBR3z7IFcuKRWBP7o6iNqF7GKQ0ARqOXo4",
+	authDomain: "chat-app-7020f.firebaseapp.com",
+	databaseURL: "https://chat-app-7020f-default-rtdb.firebaseio.com",
+	projectId: "chat-app-7020f",
+	storageBucket: "chat-app-7020f.appspot.com",
+	messagingSenderId: "997567316961",
+	appId: "1:997567316961:web:9b5546af70395556b548a0"
 });
 
 const auth = firebase.auth();
@@ -30,9 +30,6 @@ const App = () => {
 		<div className="App">
 			<main>
 				<header>
-					<a href="/" className="logo">
-						<img src="images/whatsapp2.png" alt="logo"></img>
-					</a>
 					<SignOut auth={auth} />
 				</header>
 				<section>
